@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CallsComponent } from './calls/calls.component';
+import { EventsComponent } from './events/events.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,11 @@ const routes: Routes = [
   {
     path: 'calls',
     component: CallsComponent
+  }
+  ,
+  {
+    path: 'events',
+    component: EventsComponent
   }
 ];
 

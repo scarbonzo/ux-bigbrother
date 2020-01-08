@@ -12,13 +12,7 @@
 
         <form class="form">
             <mat-form-field class="full-width">
-                <input matInput placeholder="Number..." name="number" [(ngModel)]="number" (input)="update()">
-            </mat-form-field>
-            <mat-form-field class="full-width">
-                <input matInput placeholder="Device..." name="device" [(ngModel)]="device" (input)="update()">
-            </mat-form-field>
-            <mat-form-field class="full-width">
-                <input matInput placeholder="Code..." name="code" [(ngModel)]="code" (input)="update()">
+                <input matInput placeholder="Username or machine..." name="search" [(ngModel)]="search" (input)="update()">
             </mat-form-field>
             
             <mat-form-field class="full-width">
@@ -32,12 +26,8 @@
                 <mat-datepicker-toggle matSuffix [for]="endPicker"></mat-datepicker-toggle>
                 <mat-datepicker #endPicker></mat-datepicker>
             </mat-form-field>
-
-            <mat-form-field class="full-width">
-                <input matInput placeholder="Results..." name="results" type="number" [(ngModel)]="take" (input)="update()">
-            </mat-form-field>
           </form>
     </mat-expansion-panel>
 </mat-accordion>
 <br />
-<app-callsresults [callsList]="calls"></app-callsresults>
+<app-eventsresults [eventList]="events"></app-eventsresults>

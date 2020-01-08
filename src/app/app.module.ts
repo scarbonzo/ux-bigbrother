@@ -32,13 +32,18 @@ import {
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CallsService } from './calls.service';
+import { EventsComponent } from './events/events.component';
+import { EventsresultsComponent } from './eventsresults/eventsresults.component';
+import { EventsService } from './events.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     CallsComponent,
-    CallsresultsComponent
+    CallsresultsComponent,
+    EventsComponent,
+    EventsresultsComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +69,8 @@ import { CallsService } from './calls.service';
     MatTableModule
   ],
   providers: [
-    CallsService
+    CallsService,
+    EventsService
   ],
   bootstrap: [AppComponent]
 })
