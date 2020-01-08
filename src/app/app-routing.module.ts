@@ -13,10 +13,13 @@ const routes: Routes = [
   {
     path: 'calls',
     component: CallsComponent
-  }
-  ,
+  },
   {
     path: 'events',
+    component: EventsComponent
+  },
+  {
+    path: 'events/:username',
     component: EventsComponent
   }
 ];
