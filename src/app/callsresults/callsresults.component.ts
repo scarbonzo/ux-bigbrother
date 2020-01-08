@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
 export class CallsresultsComponent {
   private calls: null;
   displayedColumns: string[] = [
+    'dateTimeConnect',
     'dateTimeDisconnect',
     'duration',
     'callingPartyNumber',
