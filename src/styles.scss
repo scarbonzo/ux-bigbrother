@@ -1,0 +1,77 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+body {
+    background-color: #F0F0F0;
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+
+.mat-grid-tile .mat-figure {
+    justify-content: flex-start !important;
+    font-size: 125% !important;
+}
+
+.bg-lightgray {
+    background-color: #D3D3D3;
+}
+
+.blue {
+    color: #145595;
+}
+
+.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+    background-color: yellow;
+}
+
+.center {
+    display: inline !important;
+    text-align: center;
+}
+
+.mat-card-header {
+    display: inline !important;
+    font-size: 130%;
+}
+
+.mat-card-content {
+    font-size: 120%;
+}
+.mat-card-footer {
+    margin: 0px !important;
+    font-size: 100%;
+}
+
+.fill-remaining-space {
+    flex: 1 1 auto;
+}
+
+.menu-spacer {
+    width: 15px;
+}
+
+.bg-blue {
+    background-color: #3f51b5;
+}
+
+.text-yellow {
+    color: yellow;
+}
+
+.text-orange {
+    color: orange;
+}
+
+
+.bg-light-blue {
+    background-color: #daddf2;
+}
+
+.title {
+    font-size: 150% !important;
+    font-weight: bolder;
+}
+
+.strong {
+    font-size: 110% !important;
+    font-weight: bold;
+}

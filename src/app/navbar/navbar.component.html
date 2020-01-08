@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span>Big Brother <span class="text-orange">2k20</span></span>
+        <span class="menu-spacer"></span>
+        
+        <div fxShow.gt-sm fxHide.lt-md>
+            <a mat-button [routerLink]="'/calls'" routerLinkActive="text-yellow" class="hidden-sm-down">Calls</a>
+        </div>
+        <span class="fill-remaining-space"></span>
+        <span fxShow.gt-sm fxHide.lt-md>
+            <button mat-raised-button color="warn" (click)="sendEmail();">HELP</button>
+        </span>
+        <button mat-icon-button [matMenuTriggerFor]="appMenu" fxHide fxShow.lt-md>
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #appMenu="matMenu">
+            <button mat-menu-item [routerLink]="'/calls'">Calls</button>
+            <button mat-menu-item (click)="sendEmail();">Help</button>
+        </mat-menu>
+    </mat-toolbar-row>
+</mat-toolbar>
