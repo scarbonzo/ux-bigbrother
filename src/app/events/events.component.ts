@@ -13,7 +13,7 @@ export class EventsComponent implements OnInit {
   search = '';
   start = new Date(new Date().getUTCFullYear(), new Date().getUTCMonth(), new Date().getUTCDate());
   end = new Date(new Date().getUTCFullYear(), new Date().getUTCMonth(), new Date().getUTCDate(), 23, 59, 59);
-  take = 100000;
+  take = 10000;
   skip = 0;
 
   constructor(private eventsService: EventsService) { }
