@@ -27,7 +27,8 @@ import {
   MatButtonModule,
   MatCardModule,
   MatFormFieldModule,
-  MatTableModule
+  MatTableModule,
+  MatSelectModule
 } from '@angular/material';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -37,6 +38,7 @@ import { EventsresultsComponent } from './eventsresults/eventsresults.component'
 import { EventsService } from './events.service';
 import { UsersComponent } from './users/users.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
+import { CalldetailsComponent } from './calldetails/calldetails.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,8 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
     EventsComponent,
     EventsresultsComponent,
     UsersComponent,
-    UserdetailsComponent
+    UserdetailsComponent,
+    CalldetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -70,7 +73,8 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
     MatCardModule,
     MatFormFieldModule,
     FlexLayoutModule,
-    MatTableModule
+    MatTableModule,
+    MatSelectModule
   ],
   providers: [
     CallsService,

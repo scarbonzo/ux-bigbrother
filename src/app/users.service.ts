@@ -13,6 +13,10 @@ export class UsersService {
 
   }
 
+  getAllUsers() {
+    return this.httpClient.get(this.baseUrl);
+  }
+
   getUsers(program: string) {
 
   }

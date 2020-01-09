@@ -12,9 +12,18 @@
 
         <form class="form">
             <mat-form-field class="full-width">
-                <input matInput placeholder="Username or machine..." name="search" [(ngModel)]="search" (input)="update()">
+                <mat-label>User</mat-label>
+                <mat-select
+                    name="selectedUser"
+                    [(ngModel)]="selectedUser"
+                    (ngModelChange)="selectUser();"
+                    >
+                  <mat-option *ngFor="let user of users" [value]="user">
+                    {{user.displayname}}
+                  </mat-option>
+                </mat-select>
             </mat-form-field>
-            
+
             <mat-form-field class="full-width">
                 <input matInput  name="start" [matDatepicker]="startPicker" [(ngModel)]="start" (dateChange)="changeEvent($event)" placeholder="Start Date..." required>
                 <mat-datepicker-toggle matSuffix [for]="startPicker"></mat-datepicker-toggle>
@@ -31,4 +40,5 @@
 </mat-accordion>
 <br />
 <app-eventsresults [eventList]="events"></app-eventsresults>
+<br />
 <app-callsresults [callsList]="calls"></app-callsresults>
