@@ -35,6 +35,8 @@ import { CallsService } from './calls.service';
 import { EventsComponent } from './events/events.component';
 import { EventsresultsComponent } from './eventsresults/eventsresults.component';
 import { EventsService } from './events.service';
+import { UsersComponent } from './users/users.component';
+import { UserdetailsComponent } from './userdetails/userdetails.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { EventsService } from './events.service';
     CallsComponent,
     CallsresultsComponent,
     EventsComponent,
-    EventsresultsComponent
+    EventsresultsComponent,
+    UsersComponent,
+    UserdetailsComponent
   ],
   imports: [
     BrowserModule,

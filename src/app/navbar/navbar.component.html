@@ -4,6 +4,7 @@
         <span class="menu-spacer"></span>
         
         <div fxShow.gt-sm fxHide.lt-md>
+            <a mat-button [routerLink]="'/users'" routerLinkActive="text-yellow" class="hidden-sm-down">Users</a>
             <a mat-button [routerLink]="'/calls'" routerLinkActive="text-yellow" class="hidden-sm-down">Calls</a>
             <a mat-button [routerLink]="'/events'" routerLinkActive="text-yellow" class="hidden-sm-down">Logins</a>
         </div>
@@ -15,9 +16,11 @@
             <mat-icon>more_vert</mat-icon>
         </button>
         <mat-menu #appMenu="matMenu">
+            <button mat-menu-item [routerLink]="'/users'">Users</button>
             <button mat-menu-item [routerLink]="'/calls'">Calls</button>
             <button mat-menu-item [routerLink]="'/events'">Logins</button>
             <button mat-menu-item (click)="sendEmail();">Help</button>
         </mat-menu>
+
     </mat-toolbar-row>
 </mat-toolbar>
