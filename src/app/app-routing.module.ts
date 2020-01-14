@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CallsComponent } from './calls/calls.component';
 import { EventsComponent } from './events/events.component';
 import { UsersComponent } from './users/users.component';
+import { HdreportsComponent } from './hdreports/hdreports.component';
 
 
 const routes: Routes = [
@@ -26,6 +27,11 @@ const routes: Routes = [
   {
     path: 'events/:username',
     component: EventsComponent
+  }
+  ,
+  {
+    path: 'hdreports',
+    component: HdreportsComponent
   }
 ];
 

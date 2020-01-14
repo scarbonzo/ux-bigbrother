@@ -38,6 +38,8 @@ import { EventsresultsComponent } from './eventsresults/eventsresults.component'
 import { EventsService } from './events.service';
 import { UsersComponent } from './users/users.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
+import { HdreportsComponent } from './hdreports/hdreports.component';
+import { HdrService } from './hdr.service';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,8 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
     EventsComponent,
     EventsresultsComponent,
     UsersComponent,
-    UserdetailsComponent
+    UserdetailsComponent,
+    HdreportsComponent
   ],
   imports: [
     BrowserModule,
@@ -76,7 +79,8 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
   ],
   providers: [
     CallsService,
-    EventsService
+    EventsService,
+    HdrService
   ],
   bootstrap: [AppComponent]
 })
