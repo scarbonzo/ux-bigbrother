@@ -38,7 +38,6 @@ import { EventsresultsComponent } from './eventsresults/eventsresults.component'
 import { EventsService } from './events.service';
 import { UsersComponent } from './users/users.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
-import { CalldetailsComponent } from './calldetails/calldetails.component';
 
 @NgModule({
   declarations: [
@@ -49,8 +48,7 @@ import { CalldetailsComponent } from './calldetails/calldetails.component';
     EventsComponent,
     EventsresultsComponent,
     UsersComponent,
-    UserdetailsComponent,
-    CalldetailsComponent
+    UserdetailsComponent
   ],
   imports: [
     BrowserModule,
