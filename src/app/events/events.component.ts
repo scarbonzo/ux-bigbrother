@@ -12,9 +12,13 @@ export class EventsComponent implements OnInit {
   displayedColumns: string[] = ['timestamp', 'machine', 'username', 'eventType', 'gw', 'dc'];
 
   search = '';
+  logons = true;
+  logoffs = true;
+  locks = true;
+  unlocks = true;
   start = new Date(new Date().getUTCFullYear(), new Date().getUTCMonth(), new Date().getUTCDate());
   end = new Date(new Date().getUTCFullYear(), new Date().getUTCMonth(), new Date().getUTCDate(), 23, 59, 59);
-  take = 10000;
+  take = 100;
   skip = 0;
 
   private sub: any;
@@ -29,7 +33,6 @@ export class EventsComponent implements OnInit {
           this.search = uname;
         }
       });
-    this.update();
   }
 
   update() {
@@ -37,13 +40,13 @@ export class EventsComponent implements OnInit {
       .getBasicEvents(
         this.start, this.end,
         this.search,
+        this.logons, this.logoffs, this.locks, this.unlocks,
         this.take, this.skip)
         .subscribe(data => { this.events = data;
     });
   }
 
   changeEvent(event) {
-    this.update();
     console.log(event.value);
   }
 

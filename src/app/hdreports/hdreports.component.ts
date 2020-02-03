@@ -8,8 +8,8 @@ import { HdrService } from '../hdr.service';
 })
 export class HdreportsComponent implements OnInit {
   report = null;
-  year = new Date().getUTCFullYear();
-  month = new Date().getUTCMonth() + 1;
+  start = new Date();
+  end = new Date();
 
   constructor(private hdrservice: HdrService) { }
 
@@ -17,15 +17,15 @@ export class HdreportsComponent implements OnInit {
     this.update();
   }
 
-  getReport(year: number, month: number) {
-    this.hdrservice.getReport(year, month)
+  getReport(start: Date, end: Date) {
+    this.hdrservice.getReport(start, end)
     .subscribe(data => { this.report = data;
     });
   }
 
   update() {
     this.getReport(
-      this.year, this.month
+      this.start, this.end
     );
   }
 

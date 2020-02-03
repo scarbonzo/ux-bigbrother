@@ -65,17 +65,40 @@ body {
     color: orange;
 }
 
-
 .bg-light-blue {
     background-color: #daddf2;
 }
 
 .title {
-    font-size: 150% !important;
+    font-size: 125% !important;
     font-weight: bolder;
 }
 
 .strong {
     font-size: 110% !important;
     font-weight: bold;
+}
+
+.top-spacer {
+    padding-top: 10px;
+}
+
+.bottom-spacer {
+    padding-bottom: 10px;
+}
+
+.radiused {
+    border-radius: 5px;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+.mat-table {
+    width: 100%;
+}
+
+.no-padding .mat-expansion-panel-body {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
 }

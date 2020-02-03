@@ -10,7 +10,9 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
   styleUrls: ['./users.component.scss']
 })
 export class UsersComponent implements OnInit {
+  programs = null;
   users = null;
+  selectedProgram = null;
   selectedUser = null;
   selectedUsername = null;
   selectedExtension = null;
@@ -23,12 +25,12 @@ export class UsersComponent implements OnInit {
 
   ngOnInit() {
     console.log(this.selectedUser);
-    this.getUsers();
+    this.getPrograms();
   }
 
-  getUsers() {
-    this.usersService.getAllUsers()
-    .subscribe(data => { this.users = data;
+  getPrograms() {
+    this.usersService.getPrograms()
+      .subscribe(data => { this.programs = data;
     });
   }
 
@@ -39,11 +41,18 @@ export class UsersComponent implements OnInit {
     this.update();
   }
 
+  selectProgram() {
+    this.usersService.getUsers(this.selectedProgram)
+      .subscribe(data => { this.users = data;
+    });
+  }
+
   update() {
     this.eventsService
     .getBasicEvents(
       this.start, this.end,
       this.selectedUsername,
+      true, true, true, true,
       100000, 0)
       .subscribe(data => { this.events = data;
     });

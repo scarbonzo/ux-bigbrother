@@ -25,12 +25,13 @@ export class EventsService {
 
   getBasicEvents(start: Date, end: Date,
                  search: string,
+                 logons: boolean, logoffs: boolean, locks: boolean, unlocks: boolean,
                  take: number, skip: number) {
     let endpoint = 'v2/events/';
     endpoint = endpoint + '?search=' + search;
     endpoint = endpoint + '&start=' + start.toISOString() + '&end=' + end.toISOString();
     endpoint = endpoint + '&startups=' + 'true' + '&shutdowns=' + 'true' + '&crashes=' + 'true' + '&renames=' + 'true';
-    endpoint = endpoint + '&logons=' + 'true' + '&logoffs=' + 'true' + '&locks=' + 'true' + '&unlocks=' + 'true';
+    endpoint = endpoint + '&logons=' + logons + '&logoffs=' + logoffs + '&locks=' + locks + '&unlocks=' + unlocks;
     endpoint = endpoint + '&take=' + take + '&skip=' + skip;
     return this.httpClient.get(this.baseUrl + endpoint);
   }

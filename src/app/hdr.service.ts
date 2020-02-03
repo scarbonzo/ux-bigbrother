@@ -9,7 +9,11 @@ export class HdrService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getReport(year: number, month: number) {
+  getMonthReport(year: number, month: number) {
     return this.httpClient.get(this.baseUrl + 'v1/summary?year=' + year + '&month=' + month);
+  }
+
+  getReport(start: Date, end: Date) {
+    return this.httpClient.get(this.baseUrl + 'v2/summary?start=' + start.toISOString() + '&end=' + end.toISOString());
   }
 }
